@@ -1,0 +1,109 @@
+.navigation-bar {
+  width: 100%;
+  height: 80px;
+  background-color: white;
+  border: 3px solid #000;
+  border-radius: 8px 8px 0 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 20px;
+  position: relative;
+}
+
+.nav-content::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #000;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.nav-link {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 12px;
+  color: #000;
+  text-transform: uppercase;
+  padding: 15px 20px;
+  cursor: url('/pixel-hand.svg'), pointer;
+  transition: background-color 0.2s ease;
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  background-color: #e55a2b;
+  color: #fff;
+  box-shadow: 4px 4px black;
+  transform: scale(1.03);
+  transition: all 0.15s ease-in-out;
+}
+
+.nav-link-active {
+  background-color: #ff6b35 !important;
+  color: #fff !important;
+}
+
+.nav-link:active {
+  background-color: #d44a1a;
+  transform: scale(0.98);
+  box-shadow: 2px 2px black;
+}
+
+.nav-separator {
+  width: 2px;
+  height: 40px;
+  background-color: #000;
+  margin: 0 5px;
+}
+
+.nav-dot {
+  width: 4px;
+  height: 4px;
+  background-color: #888;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .nav-link {
+    font-size: 10px;
+    padding: 12px 15px;
+  }
+  
+  .nav-content {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-link {
+    font-size: 8px;
+    padding: 10px 12px;
+  }
+  
+  .nav-content {
+    padding: 0 10px;
+  }
+} 

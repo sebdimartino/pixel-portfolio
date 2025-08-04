@@ -1,0 +1,158 @@
+.contact-section {
+  padding: 40px 20px 40px;
+  min-height: 100vh;
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.contact-title {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 28px;
+  color: #000;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.4;
+}
+
+.highlight-text {
+  color: #ff6b35;
+}
+
+.contact-subtext {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 12px;
+  color: #333;
+  margin-bottom: 60px;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.contact-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.contact-button {
+  display: inline-block;
+  background-color: #ff6b35;
+  color: #fff;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 20px 30px;
+  border: 3px solid #000;
+  border-radius: 8px;
+  cursor: url('/pixel-hand.svg'), pointer;
+  transition: all 0.15s ease-in-out;
+  letter-spacing: 1px;
+  font-weight: bold;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.contact-button::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #ff6b35, #ff8c42);
+  border-radius: 10px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.contact-button:hover {
+  background-color: #e55a2b;
+  box-shadow: 4px 4px black;
+  transform: scale(1.03);
+}
+
+.contact-button:hover::before {
+  opacity: 0.1;
+}
+
+.contact-button:active {
+  transform: scale(0.98);
+  box-shadow: 2px 2px black;
+  background-color: #d44a1a;
+}
+
+/* Desktop layout - buttons side by side */
+@media (min-width: 768px) {
+  .contact-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+  
+  .contact-subtext {
+    font-size: 14px;
+    margin-bottom: 80px;
+  }
+  
+  .contact-buttons {
+    flex-direction: row;
+    gap: 30px;
+    max-width: 800px;
+  }
+  
+  .contact-button {
+    font-size: 16px;
+    padding: 25px 35px;
+    flex: 1;
+  }
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+  .contact-title {
+    font-size: 36px;
+  }
+  
+  .contact-subtext {
+    font-size: 16px;
+  }
+  
+  .contact-button {
+    font-size: 18px;
+    padding: 30px 40px;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 20px 15px 30px;
+  }
+  
+  .contact-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .contact-subtext {
+    font-size: 10px;
+    margin-bottom: 40px;
+  }
+  
+  .contact-buttons {
+    gap: 15px;
+  }
+  
+  .contact-button {
+    font-size: 12px;
+    padding: 15px 25px;
+  }
+} 

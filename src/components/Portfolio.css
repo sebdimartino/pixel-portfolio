@@ -1,0 +1,79 @@
+.portfolio {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.section-placeholder {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 100px 20px 60px 20px;
+  text-align: center;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.placeholder-title {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 32px;
+  color: #000;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.placeholder-text {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 16px;
+  color: #666;
+  letter-spacing: 1px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .portfolio {
+    padding-top: 80px;
+  }
+  
+  .section-placeholder {
+    padding: 80px 15px 40px 15px;
+    min-height: 50vh;
+  }
+  
+  .placeholder-title {
+    font-size: 24px;
+  }
+  
+  .placeholder-text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio {
+    padding-top: 70px;
+  }
+  
+  .section-placeholder {
+    padding: 70px 10px 30px 10px;
+    min-height: 40vh;
+  }
+  
+  .placeholder-title {
+    font-size: 20px;
+  }
+  
+  .placeholder-text {
+    font-size: 12px;
+  }
+} 
