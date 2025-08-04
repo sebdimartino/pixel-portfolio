@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import LoadingScreen from './components/LoadingScreen';
 import StartScreen from './components/StartScreen';
 import Portfolio from './components/Portfolio';
@@ -30,6 +31,8 @@ function App() {
       {stage === 'portfolio' && (
         <Portfolio />
       )}
+      
+      <Analytics />
     </div>
   );
 }
