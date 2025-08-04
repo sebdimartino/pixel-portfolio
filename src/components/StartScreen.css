@@ -1,7 +1,10 @@
 .start-screen {
   width: 100vw;
   height: 100vh;
-  background-color: #f5f5f5;
+  background-image: url('/source.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,19 +25,21 @@
 .name-title {
   font-family: 'Press Start 2P', monospace;
   font-size: 56px;
-  color: #444;
+  color: #fff;
   letter-spacing: 2px;
   margin: 0;
   text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .portfolio-subtitle {
   font-family: 'Press Start 2P', monospace;
   font-size: 28px;
-  color: #888;
+  color: #ccc;
   letter-spacing: 1px;
   margin: 0;
   text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .play-button {
@@ -42,21 +47,22 @@
   padding: 20px 40px;
   margin-top: 20px;
   background-color: #ff6b35;
-  border: 3px solid #444;
+  border: 3px solid #fff;
   color: #fff;
   font-family: 'Press Start 2P', monospace;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .play-button:hover {
   background-color: #e55a2b;
   color: #fff;
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
 }
 
 .play-button:active {
   transform: translateY(0);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Responsive design */
